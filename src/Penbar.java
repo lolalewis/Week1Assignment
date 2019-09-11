@@ -1,20 +1,23 @@
+
 import TurtleGraphics.Pen;
 import TurtleGraphics.StandardPen;
 import hsa.Console;
 import java.awt.Color;
 
 public class Penbar {
-    int xloc,yloc, height;
-     Pen p = new StandardPen();   
-     Color col;
-     
-    public void draw(Console c){
-        p.up();
-        p.move(xloc,yloc);
-        p.down();
-        p.setWidth(50);
+
+    int xloc, yloc, width;
+    Pen pb = new StandardPen();
+    Color col;
+
+    public void draw(Console c) {
+        pb.up();
+        pb.move(xloc,yloc);       
+        pb.down();
+        pb.setWidth(50);
         c.setColor(col);
-         p.setDirection(0);
-       //  p.move(width);
+        pb.setDirection(0);
+        pb.move(width);
+        pb.drawString("Width: " + width); 
     }
 }
