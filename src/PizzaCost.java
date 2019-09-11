@@ -18,7 +18,7 @@ public class PizzaCost {
         base= 0.50*size;
         pizza= s.nextDouble();
         pizza= size+heat+toppings+base;
-        System.out.format("Your pizza will cost %d dollars. \n",pizza);
+        System.out.format("Your pizza  is done. \n",pizza);
        
         
     }
