@@ -6,19 +6,20 @@ public class PizzaCost {
   
     public static void main(String[] args) {
       Scanner s = new Scanner(System.in) ;
-      double size, toppings,heat,base,pizza;
-        System.out.println("Enter the size of the pizza in inches > ");
-        size= s.nextDouble();
-        size +=1.50;
-        heat = s.nextDouble();
-        heat+= 0.75;
-        toppings =s.nextDouble();
-        toppings+=0.75;
-        base = s.nextDouble();
-        base= 0.50*size;
-        pizza= s.nextDouble();
-        pizza= size+heat+toppings+base;
-        System.out.format("Your pizza  is done. \n",pizza);
+      // CONSTANTS for fixed price amounts
+      final double LABOUR = 1.5, HEAT = 0.75;
+      final double PERTOP = 0.75, PERINCH =.5;
+      //variables required
+      double size, toppings, totalcost;
+      //ask for inputs
+        System.out.print("Enter Size of pizza: ");
+        size = s.nextDouble();
+        System.out.print("How many toppings?; ");
+        toppings = s.nextDouble();
+        //calculate total & show total cost
+        totalcost = LABOUR + HEAT + (toppings * PERTOP) + (size + PERINCH);
+        System.out.format("Total cost of your pizza is $%.2f\n", totalcost);      
+      
        
         
     }
