@@ -1,6 +1,7 @@
 
 import hsa.Console;
 import java.awt.Color;
+import java.util.Random;
 
 public class BarChart1 {
     static Console c;
@@ -23,34 +24,29 @@ public class BarChart1 {
         c.setColor(Color.blue);
         c.drawString("Hello There", 300, 300);
 */
-       int h1,h2,h3,h4;
-       c.print("Enter height of bar1> ");      
-       h1= c.readInt();
-       c.setColor(Color.RED);
-       //1st bar
-       c.fillRect(100, 500-h1, 50, h1);
-       c.drawString("Value: "+ h1, 100,500-h1-20);
-       
-       //2nd bar
-       c.print("Enter height of bar2> ");       
-       h2= c.readInt();
-       c.setColor(Color.blue);
-       c.fillRect(200, 500-h2, 50, h2);
-       c.drawString("Value: "+ h2, 200,500-h2-20);
-       
-       //3rd bar
-       c.print("Enter height of bar3> ");       
-       h3= c.readInt();
-       c.setColor(Color.red);
-       c.fillRect(300, 500-h3, 50, h3);
-       c.drawString("Value: "+ h3, 300,500-h3-20);
-       
-       //4th bar
-       c.print("Enter height of bar4> ");       
-       h4= c.readInt();
-       c.setColor(Color.blue);
-       c.fillRect(400, 500-h4, 50, h4);
-       c.drawString("Value: "+ h4, 400,500-h4-20);
+       int height;
+       //for loop for 4 bars
+        for (int i = 0; i < 4; i++) {
+            //make sure data is from 10-400
+            while(true){
+                c.print("Enter a height for bar " + (i+1) + "(max 400) > ");
+                height = c.readInt();
+                if(height <=400 && height >=10){
+                    break;
+                }else{
+                    c.print("Error number must be lower than 400\n");
+                
+                }
+            }
+            c.setColor(rng()); // random color using method below
+            c.fillRect(50 + 100 * i, 500-height, 50,height);
+            c.drawString("Value: "+ height, 50 +100*i, 500-height-20);
+        }
+    }
+        public static Color rng(){
+        Random r = new Random();
+        return new Color (r.nextInt(255),r.nextInt(255),r.nextInt(255));
+        
                
     }
 
