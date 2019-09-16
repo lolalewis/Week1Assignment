@@ -17,7 +17,7 @@ public class Penbar {
         pb.setWidth(50);
         c.setColor(col);
         pb.setDirection(0);
-        pb.move(width);
+        pb.move(width);       
         pb.drawString("Width: " + width); 
     }
 }
