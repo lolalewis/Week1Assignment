@@ -2,49 +2,58 @@
 import TurtleGraphics.SketchPadWindow;
 import TurtleGraphics.StandardPen;
 import TurtleGraphics.Pen;
-import hsa.Console;
+//import hsa.Console;
 import java.awt.Color;
 import java.util.Scanner;
 
 public class BarChart3 {
 
     public static void main(String[] args) {
-        Pen p = new StandardPen(new SketchPadWindow(800, 600));
+       
         Penbar pb1, pb2, pb3, pb4;
-        Scanner scan = new Scanner(System.in);
-        Console c = new Console();
-        // Penbar[] = new 
+        Scanner s = new Scanner(System.in);
+         //Console c = new Console();
+     
         pb1 = new Penbar();
         pb2 = new Penbar();
         pb3 = new Penbar();
         pb4 = new Penbar();
-
-          int width;
-        //for loop for bars
-        for (int i = 0; i < 4; i++) {
-            while (true) {
-                c.print("Enter width for bar " + (i + 1) + "(max400)>");
-                width = c.readInt();
-                if (width <= 400 && width > 10) {
-                    break;
-                } else {
-                    c.print("Error number must be lower than 400\n");
-                }
-            }
-        }
+       
+      //  int width,x,yloc;
+      
+        //4 bars
+        System.out.println("Enter width for bar 1: ");
+        pb1.width=s.nextInt(50);
+        pb1.xloc=50+100;
+        
+        System.out.println("Enter width for bar 2: ");
+        pb2.width=s.nextInt(50);
+        pb2.xloc=50+200;
+        
+        System.out.println("Enter width for bar 3: ");
+        pb3.width=s.nextInt(50);
+        pb3.xloc=50+300;
+        
+        System.out.println("Enter width for bar 4: ");
+        pb4.width=s.nextInt(50);
+        pb4.xloc=50+400; 
+        
+        Pen p = new StandardPen(new SketchPadWindow(800, 600));
 
         makeBar(p, pb1, -350, 200, pb1.width, Color.blue);
-        makeBar(p, pb2, -350, 100, pb1.width, Color.red);
-        makeBar(p, pb3, -350, 0, pb1.width, Color.green);
-        makeBar(p, pb4, -350, -100, pb1.width, Color.orange);
-
+        makeBar(p, pb2, -350, 100, pb2.width, Color.red);
+        makeBar(p, pb3, -350, 0, pb3.width, Color.green);
+        makeBar(p, pb4, -350, -100, pb4.width, Color.orange);
+ 
     }
 
     public static void makeBar(Pen p, Penbar pb, int x, int y, int w, Color c) {
-     //  pb.x = x;
-     //   pb.y = y;
-        pb.width = w;
-       // pb.draw(p);
+       pb.xloc =x;
+       pb.yloc = y;
+       pb.width = w;
+       pb.col = c;
+       //pb.draw(p);
+       
 
     }
 
