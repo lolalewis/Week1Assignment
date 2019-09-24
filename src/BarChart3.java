@@ -19,24 +19,24 @@ public class BarChart3 {
         pb3 = new Penbar();
         pb4 = new Penbar();
        
-      //  int width,x,yloc;
+        int width,x,yloc;
       
         //4 bars
         System.out.println("Enter width for bar 1: ");
-        pb1.width=s.nextInt(50);
-        pb1.xloc=50+100;
+        pb1.width=s.nextInt();
+        
         
         System.out.println("Enter width for bar 2: ");
-        pb2.width=s.nextInt(50);
-        pb2.xloc=50+200;
+        pb2.width=s.nextInt();
+        
         
         System.out.println("Enter width for bar 3: ");
-        pb3.width=s.nextInt(50);
-        pb3.xloc=50+300;
+        pb3.width=s.nextInt();
+        
         
         System.out.println("Enter width for bar 4: ");
-        pb4.width=s.nextInt(50);
-        pb4.xloc=50+400; 
+        pb4.width=s.nextInt();
+        
         
         Pen p = new StandardPen(new SketchPadWindow(800, 600));
 
@@ -52,7 +52,7 @@ public class BarChart3 {
        pb.yloc = y;
        pb.width = w;
        pb.col = c;
-       //pb.draw(p);
+       pb.draw(p);
        
 
     }
