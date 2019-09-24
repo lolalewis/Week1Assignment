@@ -1,7 +1,7 @@
 
 import java.util.Set;
 import javax.swing.JOptionPane;
-
+ /*
 public class PizzaCostJFrame {
 
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class PizzaCostJFrame {
         final double PERTOP = 0.75, PERINCH = 0.5;
         double size, toppings, totalcost, sizetotal, toptotal;
         
-        
+       
 
     public PizzaCostJFrame() {
         initComponents();
@@ -46,3 +46,5 @@ public class PizzaCostJFrame {
     
     
 }
+
+ */
