@@ -19,6 +19,6 @@ public class Penbar {
         p.setColor(col);
         pb.setDirection(0);
         pb.move(width);       
-       // pb.drawString("Value: " + width); 
+        pb.drawString("Value: " + width); 
     }
 }
